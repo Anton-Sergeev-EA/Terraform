@@ -1,0 +1,13 @@
+services:
+  web:
+    image: ${APP_IMAGE:?Set APP_IMAGE}
+    ports:
+      - "80:8080"
+    restart: unless-stopped
+    environment:
+      DB_HOST: ${DB_HOST:?Set DB_HOST}
+      DB_NAME: ${DB_NAME:?Set DB_NAME}
+      DB_USER: ${DB_USER:?Set DB_USER}
+    volumes:
+      - /run/yandex-web/db_password:/run/secrets/db_password:ro
+      - /opt/yandex-web/yandex-ca.pem:/etc/mysql/yandex-ca.pem:ro

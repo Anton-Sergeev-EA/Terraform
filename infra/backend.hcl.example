@@ -1,0 +1,16 @@
+bucket         = "REPLACE_PRIVATE_BUCKET"
+key            = "course-web/terraform.tfstate"
+region         = "ru-central1"
+dynamodb_table = "state-lock"
+
+endpoints = {
+  s3       = "https://storage.yandexcloud.net"
+  dynamodb = "https://docapi.serverless.yandexcloud.net/ru-central1/REPLACE_DATABASE_ID"
+}
+
+skip_region_validation      = true
+skip_credentials_validation = true
+skip_requesting_account_id  = true
+skip_metadata_api_check     = true
+skip_s3_checksum            = true
+use_path_style              = true

@@ -1,0 +1,6 @@
+zone              = "ru-central1-a"
+ssh_cidr          = "203.0.113.10/32"
+ssh_public_key    = "ssh-ed25519 REPLACE_PUBLIC_KEY"
+db_preset         = "REPLACE_AVAILABLE_MYSQL_PRESET"
+secret_id         = "REPLACE_LOCKBOX_SECRET_ID"
+secret_version_id = "REPLACE_LOCKBOX_VERSION_ID"

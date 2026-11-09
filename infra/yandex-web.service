@@ -1,0 +1,17 @@
+[Unit]
+Description=Yandex Cloud course web application
+After=network-online.target docker.service
+Wants=network-online.target
+Requires=docker.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/yandex-web
+ExecStart=/opt/yandex-web/start.sh
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target
